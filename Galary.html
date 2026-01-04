@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewreport" content="width-device.width",
+          initial-scale="1">
+    <title>Our Gallary</title>
+    <link rel="stylesheet" type ="text/css" href="style.css">
+    <link rel="stylesheet" type ="text/css" href="styleCss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .order-btn {
+    display: inline-block;
+    padding: 1px 5px;
+    border: red 3px solid;
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 15px;
+    align-items: center;
+    margin-left: 20px;
+  }
+  .order-btn::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: #ffbb99;
+    transition: 0.5s linear;
+    z-index: -1;
+  }
+  .order-btn:hover::before {
+    width: 100%;
+    right: 100%;
+    left: 0%;
+  }
+  .order-btn:hover {
+    color: #ffffff;
+    border-color: #ffbb99;
+  }
+</style>
+</head>
+<body>
+<header>
+    <h1 class="animated-title">Our Gallery</h1>
+    <nav class="navv">
+
+        <a href="index.html" style="color: red; font-size:27px;">Home ></a>
+    </nav>
+</header>
+<main>
+    <div class="gallery" style="margin-top: 150px;">
+        <div class="gallery-item" >
+            <img src="images/b.jpg" alt="Dish 1" >
+            <div class="caption">
+                <div><h2>Delicious Burger </h2>
+                    <p>We offer the most delicious types of burgers of all kinds with unique recipes. To enjoy  Try the taste. </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="gallery-item">
+            <img  src="images/img2.jpg" alt="Dish 2">
+            <div class="caption">
+                <div><h2>Delicious Pizza </h2>
+                    <p>Our pizza is very delicious. We offer it in all kinds, so we advise you to try it </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img  src="images/img3.jpg" alt="Dish 3">
+            <div class="caption">
+                <div><h2>Delicious Green Salad </h2>
+                    <p>If you are a fan of salad, you have come to the right place. We offer the best types with all flavors and recipes </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img height="100" width="100" src="images/img4.jpg" alt="Dish 4">
+            <div class="caption">
+                <div><h2>Delicious Sandwitch </h2>
+                    <p>If you need a quick and delicious snack at the same time, you have come to the right place... We offer it in all tastes and sizes. </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img src="images/img5.jpg" alt="Dish 5">
+            <div class="caption">
+                <div><h2>Delicious Sochi </h2>
+                    <p>If you are a fan of sushi, we advise you to try it from our restaurant because you will not regret it. We offer it with all recipes. </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img src="images/img6.jpg" alt="Dish 6">
+            <div class="caption">
+                <div><h2>Delicious Pan Cake </h2>
+                    <p>If you want a light and delicious meal, we recommend pancakes, which we offer in all flavors and sizes </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img src="images/img7.jpg" alt="Dish 7">
+            <div class="caption">
+                <div><h2>Delicious Frize Checken</h2>
+                    <p>If you are hungry and have no choice, definitely try the fried chicken with potatoes, you will not regret it </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img src="images/img8.jpg" alt="Dish 8">
+            <div class="caption">
+                <div><h2>Delicious Coffee Lateh </h2>
+                    <p>If you want to improve your mood, we offer the best and finest coffee in the world, so enjoy it </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img src="images/f.jpg" alt="Dish 9">
+            <div class="caption">
+                <div><h2>Delicious Fish Dishes </h2>
+                    <p>If you like seafood, order fish,  we offer it in all types and recipes </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img src="images/img10.jpg" alt="Dish 10">
+            <div class="caption">
+                <div><h2>Delicious Fruit Juice </h2>
+                    <p>We offer all kinds of natural juices in all flavors. Order now</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img src="images/ice-cream.jpg" alt="Dish 11">
+            <div class="caption">
+                <div><h2>Delicious Ice-Cream</h2>
+                    <p>If you like ice cream, try it from our restaurant. We serve it with the finest types and the most delicious flavors </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img src="images/img11.jpg" alt="Dish 12">
+            <div class="caption">
+                <div><h2>Delicious Soap </h2>
+                    <p>If you want a light dish with your food, we offer a very delicious soup. Available in all flavours </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-item">
+            <img src="images/img13.jpg" alt="Dish 13">
+            <div class="caption">
+                <div><h2>Delicious Spagete </h2>
+                    <p>If you are a fan of pasta, order it from our restaurant... We offer it in all shapes and tastes </p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/img14.jpg" alt="Dish 14">
+            <div class="caption">
+                <div><h2>Delicious Cake</h2>
+                    <p>If you like sweets, we advise you to try cakes. They are available in all sizes and tastes </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

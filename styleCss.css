@@ -1,0 +1,903 @@
+*{
+    color: black;
+    font-family: "Bold Italic Art";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border:none;
+    outline: none;
+    transition: all .3s linear;
+}
+*::selection{
+    color: white;
+    background-color: red;
+}
+
+html{
+    font-size: 70%;
+    overflow-x: hidden;
+}
+
+body{
+  background: antiquewhite;
+
+}
+
+
+#H{
+    padding: 3rem 10%;
+}
+
+.l{
+    position: relative;
+    top: 7px;
+}
+
+.Log{
+    position: absolute;
+    color: grey;
+    font-size: 20px;
+    right: 1170px;
+  border: solid darkred 3px;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: darkred;
+    color: #ffffff;
+    font-weight: bolder;
+
+}
+
+.Log:hover{
+    color: red;
+    background-color: white;
+    border-color: white;
+}
+
+.orbtn{
+    display: inline-block;
+    padding: 1px  5px;
+    border: red 3px solid;
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 15px;
+}
+.orbtn::before{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: #ffbb99;
+    transition: 0.5s linear ;
+    z-index: -1;
+}
+
+.orbtn:hover::before{
+width: 100%;
+    right: 100%;
+    left: 0%;
+}
+
+.orbtn:hover{
+    color: #ffffff;
+    border-color: #ffbb99;
+}
+
+
+
+header{
+    position: fixed;
+    left:0;top:0;right: 0;
+    align-items: center;
+background: antiquewhite;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+z-index: 1000;
+
+}
+
+.icoon{
+    font-weight: bold;
+    font-size: 2.3rem;
+    color: gray;
+}
+.icoon i{
+    padding-right: 0.5rem;
+    color: red;
+}
+.navv a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: gray;
+}
+.navv a:hover{
+    color: red;
+}
+#menub{
+    font-size: 2.3rem;
+    color: darkgray;
+    border: solid 1px gray;
+    border-radius: 0.35rem;
+    padding: 0.5rem 1.3rem;
+    display: none;
+}
+section{
+    padding-left: 15%;
+    padding-top: 30px ;
+    padding-right: 15%;
+}
+
+
+
+.welcome{
+/*   float: right;*/
+/*margin-right: 10px;*/
+/*    margin-bottom: 10px;*/
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 75px;
+   align-items: center;
+    min-height: 80vh;
+    background: url("images/FB.jpg") no-repeat;
+    background-size: cover;
+    background-position: left;
+
+}
+
+#he{
+    text-align: center;
+    font-family: "Artifakt Element Heavy";
+    font-size: 35px;
+    /*padding: 5px;*/
+    margin-bottom: 3rem;
+    color: #404040;
+
+}
+#he span{
+    color: #ff1a1a;
+    font-family: "Artifakt Element Heavy";
+    font-size: 35px;
+}
+
+.cont{
+width: 100%;
+    height: 100vh;
+    position: relative;
+ /*flex: 2 2 50rem;*/
+ /*   padding-top: 5rem;*/
+}
+/*.s{*/
+/*    font-family: "Snap ITC";*/
+/*}*/
+
+#video12{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.wtext{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    background: rgb(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wtext h2{
+    .wtext p{
+        padding: 15px 0;
+        color: red;
+    }
+}
+.wtext p{
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.welcome. image{
+  flex:1 1 40rem;
+}
+#im{
+    width: 100%;
+    padding: 1rem;
+float: left;
+    animation: float 1.6s linear infinite;
+}
+@keyframes float {
+   0%,100%{
+       transform: translateY(0rem);
+   }
+    70%{
+        transform: translateY(2rem);
+    }
+
+}
+#h2id{
+
+    font-size: 50px;
+    color: red;
+}
+
+#par{
+ align-items: center;
+    font-size: 30px;
+    color: #ffffff;
+}
+@media (max-width: 1000px) {
+    html{
+        font-size: 50%;
+    }
+    header{
+        padding: 2.5rem;
+    }
+
+}
+@media (max-width: 800px) {
+    #menub{
+        display: initial;
+    }
+    .navv{
+        position: absolute;
+        top: 100%;left: 0;right: 0;
+        background: whitesmoke;
+        border-top: 1px solid darkred;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    .navv.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    .navv a{
+        margin: 2px;
+        padding: 2px;
+        display: block;
+        border: 2.5px darkred solid;
+        border-left: 4px solid darkred;
+        background: #ffffff;
+    }
+
+    .Log{
+        position: relative;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+}
+
+
+#body1{
+    background: #fff5e6;
+}
+
+.cb{
+display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.bx{
+    flex: 2 2 35rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: solid  #cc0000 5px;
+    cursor: pointer;
+}
+.m{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -100%;
+    left: 0;
+}
+.content2{
+    text-align: center;
+    background: white;
+    padding: 15px;
+
+}
+.content2 img{
+    margin: 12rem 5rem;
+}
+
+.content2 h4{
+    font-size: 25px;
+    font-family: "Snap ITC";
+    color: #262626;
+}
+.content2 p{
+    font-size:18px ;
+    color: #808080;
+    padding: 3px 0;
+}
+.bx:hover .m{
+    top: 0;
+}
+.bx:hover .content2{
+    transform: translateX(100%);
+
+}
+#he2{
+    text-align: center;
+    color:red ;
+    font-family: "Snap ITC";
+    font-size: 35px;
+}
+#he2 span{
+    text-align: center;
+    color:#262626 ;
+    font-family: "Snap ITC";
+    font-size: 35px;
+
+}
+
+.bxxcont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.bxx{
+    padding: 3rem;
+    background: white;
+    border: solid 3px red;
+    border-radius: 50px;
+    text-align: center;
+    flex: 2 2 40rem;
+    position: relative;
+}
+
+.bxx img{
+    height: 30rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 40px;
+}
+
+.cost{
+    background: #ffcc66;
+    position: absolute;
+    top: 50px; left:50px;
+    font-size: 20px;
+    padding: 1rem 0.5rem;
+    border-radius: 15px;
+   font-weight: bold;
+}
+
+.bxx h4{
+    color: #0d0d0d;
+    font-size: 20px;
+    padding-top: 1rem;
+}
+
+.bxx .star i{
+    color: gold;
+    font-size: 13px;
+    padding: 1rem;
+}
+
+.bxx a{
+    display: inline-block;
+    padding: 1px  5px;
+    border: #cc0000 3px solid;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 15px;
+}
+.bxx a::before{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: #cc0000;
+    transition: 0.5s linear ;
+    z-index: -1;
+}
+
+.bxx a:hover::before{
+    width: 100%;
+    right: 100%;
+    left: 0%;
+}
+
+.bxx a:hover{
+    color: #ffffff;
+}
+#body2{
+    background: #ffe6e6;
+}
+
+#body3{
+
+    background: url("images/F-Back.jpg" )no-repeat ;
+background-size: cover;
+    /*background-position: center;*/
+
+
+}
+
+.contact{
+    padding: 50px 17% 35px;
+}
+
+.main-contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    justify-content: center;
+
+    gap: 4rem;
+}
+
+.contact-content{
+    font-size: 20px;
+    margin-bottom: 2rem;
+    color: red;
+}
+.contact-content li{
+    margin-bottom:1.3rem;
+}
+.contact-content li a{
+    display: inline-block;
+    color: brown;
+    font-weight:1000;
+    transition: all .35s ease;
+
+}
+.contact-content li a:hover{
+    transform: translate3d(10px,10px,10px);
+    color: deeppink;
+}
+
+/*.contact-content2{*/
+/*    font-size: 20px;*/
+/*    margin-left: 450px;*/
+/*}*/
+
+#body4{
+    background: url("images/login.jpg") ;
+}
+
+
+.p-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: #ffffff;
+
+    transform: translate(-50%,-50%);
+    border: solid 3.5px #b30000;
+    max-width: 800px;
+    width: 100%;
+}
+.p-form .form-box{
+    display: flex;
+}
+
+.form-box .form-details{
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    padding-top: 90px;
+    text-align:center ;
+    width: 100%;
+padding: 0 25px;
+ font-family: "Snap ITC";
+    font-size: 20px;
+    font-weight: 1000;
+
+
+
+}
+
+.form-box h1{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 15px;
+
+}
+
+.p-form .close-btn{
+    position: absolute;
+    top:15px;
+    right: 15px;
+    color: #4d0099;
+    cursor: pointer;
+}
+
+
+.form-box .form-content{
+    width: 100%;
+    padding: 50px;
+
+}
+
+form .in-field{
+    height: 50px;
+    width: 100%;
+    margin-top: 8px;
+    position: relative;
+}
+form .in-field input{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border: solid 2px #b30000;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 15px;
+}
+
+.in-field input:focus{
+    border-color:  #cc00cc;
+}
+
+.in-field input:is(:focus, :valid){
+   padding: 18px 15px 0;
+
+}
+
+form .in-field label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    color: #404040;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.5s ease;
+}
+
+
+.in-field input:is(:focus,:valid)~ label{
+    transform: translateY(-130%);
+    font-size: 1.4rem;
+    color: #990099;
+
+}
+
+.form-box  a{
+    color: #e600e6;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.form-box a:hover{
+    text-decoration: underline;
+}
+
+.form-box :where(.forget,.policy){
+    display: inline-flex;
+    margin-top: 16px;
+    font-size: 1.3rem;
+}
+.form-box .buttom-link{
+    text-align: center;
+
+}
+
+form button{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.9rem;
+    font-weight: 700;
+    padding: 17px 0;
+    border-radius: 15px;
+    margin: 30px 0;
+    color: #ffffff;
+    cursor: pointer;
+    background: #ff1a1a;
+    transition: 0.5s ease;
+}
+
+form button:hover{
+    background: #a64dff;
+}
+
+.login .form-details{
+    background: url("images/cute-food.jpg")center/cover;
+}
+
+.signup .form-details{
+    background: url("images/signup.jpg")center/cover;
+}
+
+/*.p-form .signup,*/
+/*.p-form .show-signup   .login*/
+/*{*/
+/*display: none;*/
+/*}*/
+
+
+
+.signup .policy{
+    display: flex;
+    align-items: center;
+}
+
+.signup .policy input{
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+}
+
+.p-form .show-signup   .signup{
+display: flex;
+}
+
+@media (max-width:800px )  {
+ .p-form{
+     width: 93%;
+ }
+    .form-box .form-details{
+        display: none;
+    }
+    .form-box .form-content{
+        padding: 40px 30px;
+    }
+}
+
+.body5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+
+}
+
+.body5::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("images/forgot.jpg");
+    background-position: center;
+
+}
+
+.forgotcont{
+    width: 750px;
+    border-radius: 15px;
+    padding: 50px;
+    text-align: center;
+    border: white solid 3px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+.form2{
+    display: flex;
+    flex-direction: column;
+}
+.h11{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: "Snap ITC";
+}
+.input-text{
+    position: relative;
+    border-bottom: 2px solid #ffffff;
+    margin: 15px 0;
+}
+
+.input-text label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: purple;
+    font-size: 20px;
+    pointer-events: none;
+    transition: 0.13s ease;
+
+}
+
+.input-text input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: white;
+}
+
+.input-text input:focus~label,
+.input-text input:valid~label{
+    font-size: 1.2rem;
+    top: 15px;
+    transform: translateY(-120%);
+}
+
+.forgot{
+    display: flex;
+    align-items: center;
+    margin: 25px 0 30px;
+   color: white;
+}
+#remember{
+    accent-color: #9900cc;
+}
+
+.forgot label{
+    display: flex;
+    align-items: center;
+
+}
+
+.forgot p{
+    margin-left: 9px;
+
+}
+
+.forgotcont a{
+    color: purple;
+    text-decoration: none;
+    font-size: 15px;
+}
+.forgotcont a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.button2{
+    background: white;
+    color: #9900cc;
+    font-weight: 650;
+    border: none;
+    padding: 14px 22px;
+    cursor: pointer;
+    border-radius: 100px;
+    font-size: 25px;
+    font-family: "Snap ITC";
+    border: 3px solid transparent;
+    transition: 0.5s ease;
+}
+
+.button2:hover{
+    background: dodgerblue;
+    color: aliceblue;
+    border-color:aliceblue;
+}
+
+.register{
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+}
+.register p{
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#rem1{
+    font-size: 13px;
+    color: white;
+}
+
+
+.body6{
+    margin: 0;
+    padding:0;
+    background: url("images/terms.jpg");
+    /*background-size: cover;*/
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.termsb{
+max-width: 480px;
+    background-color: white;
+    color: purple;
+    font-family: "Akhbar MT";
+    padding: 50px 30px;
+}
+   .termst{
+       padding: 0 25px;
+       height: 400px;
+       overflow-x: auto;
+       font-size: 15px;
+       color: #9900cc;
+   }
+
+
+   .termst::-webkit-scrollbar{
+       width: 3px;
+       background-color: lightskyblue;
+   }
+
+   .termst::-webkit-scrollbar-thumb{
+       background-color: #ffbb99;
+   }
+.termst h1{
+    text-transform: uppercase;
+}
+.termsb h3{
+    font-size: 14px;
+    text-align: center;
+    padding: 0 35px;
+
+}
+
+.termsb h3 span{
+    color: #9900cc;
+}
+
+.but{
+    display: flex;
+    padding: 0 25px;
+    justify-content: space-between;
+}
+.btnn{
+height: 50px;
+    width: calc(50% - 6px);
+    border: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    color: mediumblue;
+    transition:.5s linear ;
+    cursor: pointer;
+}
+.r{
+    background-color: pink;
+}
+.r2{
+background-color: navajowhite;
+}
+
+.btnn:hover{
+    color: #ffffff;
+    background-color: purple;
+}
+
+.termst p{
+    color: #4d0099;
+}
+
+
+
+/*.show-pp .blur-bg-overlay{*/
+/*    opacity: 0;*/
+/*    pointer-events: auto;*/
+/*}*/
+
+/*.show-pp .p-form{*/
+/*    opacity: 1;*/
+/*    pointer-events: auto;*/
+/*    transform: translate(-50%,-50%);*/
+/*    transition:transform 0.3s ease,opacity0.1s;*/
+/*}*/
+

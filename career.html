@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers - Our Restaurant</title>
+  <style>
+    #b {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: antiquewhite;
+      color: #333;
+    }
+
+    header {
+      background-color: antiquewhite;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .intro, .job-listings, .application-form {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+    }
+
+    .job {
+      border-bottom: 1px solid #ccc;
+      padding: 1rem 0;
+    }
+
+    .application-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .application-form label {
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .application-form input,
+    .application-form select,
+    .application-form button {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .application-form button {
+      background-color: #ff1a1a;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .application-form button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color:antiquewhite;
+      color: #0d0d0d;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body id="b">
+<header>
+  <h1>Careers at Our Restaurant</h1>
+</header>
+
+<section class="intro">
+  <p>Welcome to Our Restaurant's Careers page! We are always looking for talented individuals to join our team. If you have a passion for food and customer service, we would love to hear from you.</p>
+</section>
+
+<section class="job-listings">
+  <h2>Current Job Openings</h2>
+  <div class="job">
+    <h3>Server</h3>
+    <p>We are looking for friendly and energetic servers to provide excellent customer service to our guests.</p>
+    <p><strong>Requirements:</strong> Prior experience in a similar role is preferred. Excellent communication skills are a must.</p>
+  </div>
+  <div class="job">
+    <h3>Chef</h3>
+    <p>We are seeking a creative and experienced chef to join our kitchen team.</p>
+    <p><strong>Requirements:</strong> Culinary degree or equivalent experience. Ability to work in a fast-paced environment.</p>
+  </div>
+
+</section>
+
+<section class="application-form">
+  <h2>Apply Now</h2>
+  <form action="submit_application.php" method="post">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="position">Position Applying For</label>
+    <select id="position" name="position" required>
+      <option value="server">Server</option>
+      <option value="chef">Chef</option>
+      <!-- Add more positions as needed -->
+    </select>
+
+    <label for="resume">Upload Resume</label>
+    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2024 Our Restaurant. All rights reserved.</p>
+</footer>
+</body>
+</html>

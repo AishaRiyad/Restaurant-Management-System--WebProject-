@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popular</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styleCss.css" />
+  <style>
+    .order-btn {
+      display: inline-block;
+      padding: 1px 5px;
+      border: red 3px solid;
+      color: red;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+      margin-top: 15px;
+      align-items: center;
+      margin-left: 20px;
+    }
+    .order-btn::before {
+      position: absolute;
+      content: '';
+      width: 0%;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background: #ffbb99;
+      transition: 0.5s linear;
+      z-index: -1;
+    }
+    .order-btn:hover::before {
+      width: 100%;
+      right: 100%;
+      left: 0%;
+    }
+    .order-btn:hover {
+      color: #ffffff;
+      border-color: #ffbb99;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body id="body2">
+
+<section class="pop" id="pop">
+<!--   -->
+  <div class="header">
+      <header>
+          <h1 id="he2"  style="margin-left: 10px">Our <span>Popular</span> Types</h1>
+          <nav class="navv">
+<a href="index.html" style="color: red; font-size:27px;">Home ></a>
+
+          </nav>
+
+      </header>
+
+  </div>
+    <div class="bxxcont" style="margin-top: 70px">
+
+        <div class="bxx">
+            <span class="cost">$15-$30</span>
+            <img src="images/burger2.jpg"/>
+            <h4>Delicious Burger</h4>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+
+            </div>
+            <a href="login.php" class="ptn">Order Now!</a>
+        </div>
+
+        <div class="bxx">
+            <span class="cost">$13-$25</span>
+            <img src="images/chburger2.png"/>
+            <h4>Tasty chicken Burger</h4>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+
+            </div>
+            <a href="login.php" class="ptn">Order Now!</a>
+        </div>
+
+        <div class="bxx">
+            <span class="cost">$17-$25</span>
+            <img src="images/cchicken.jpg"/>
+            <h4>Cricpy chicken</h4>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+
+            </div>
+            <a href="login.php" class="ptn">Order Now!</a>
+        </div>
+
+        <div class="bxx">
+            <span class="cost">$20-$35</span>
+            <img src="images/pizza2.jpg"/>
+            <h4> Pepperoni pizza </h4>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+
+            </div>
+            <a href="login.php" class="ptn">Order Now!</a>
+        </div>
+
+        <div class="bxx">
+            <span class="cost">$10-$35</span>
+            <img src="images/italian.jpg"/>
+            <h4>Italian food</h4>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+
+            </div>
+            <a href="login.php" class="ptn">Order Now!</a>
+        </div>
+
+
+        <div class="bxx">
+            <span class="cost">$5-$10</span>
+            <img src="images/cake.jpg"/>
+            <h4>Cake</h4>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+
+            </div>
+            <a href="login.php" class="ptn">Order Now!</a>
+        </div>
+
+        <div class="bxx">
+            <span class="cost">$3-$20</span>
+            <img src="images/ice-cream.jpg"/>
+            <h4>Ice-Cream</h4>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+
+            </div>
+            <a href="login.php" class="ptn">Order Now!</a>
+        </div>
+
+        <div class="bxx">
+            <span class="cost">$20-$40</span>
+            <img src="images/arabicdessert.jpg"/>
+            <h4>Arabic dessrt</h4>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+
+            </div>
+            <a href="login.php" class="ptn">Order Now!</a>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

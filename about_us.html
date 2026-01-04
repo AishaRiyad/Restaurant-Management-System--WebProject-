@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewreport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" type ="text/css" href="style1.css">
+    <title>About Us</title>
+  <style>
+    .order-btn {
+      display: inline-block;
+      padding: 1px 5px;
+      border: red 3px solid;
+      color: red;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+      margin-top: 15px;
+      align-items: center;
+      margin-left: 20px;
+    }
+    .order-btn::before {
+      position: absolute;
+      content: '';
+      width: 0%;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background: #ffbb99;
+      transition: 0.5s linear;
+      z-index: -1;
+    }
+    .order-btn:hover::before {
+      width: 100%;
+      right: 100%;
+      left: 0%;
+    }
+    .order-btn:hover {
+      color: #ffffff;
+      border-color: #ffbb99;
+    }
+  </style>
+</head>
+<body>
+<section class="hero">
+    <div class="heading">
+        <h1>About Us</h1>
+    </div>
+    <div class ="container">
+        <div class="content2">
+            <h2>Welcome To Our Website</h2>
+            <p>Welcome to our page... We created this page in
+                order to provide delicious food to you... Our
+                restaurant is characterized by being comprehensive,
+                offering the best recipes at reasonable prices,
+                and we have a wonderful and distinguished staff...
+                It is characterized by the possibility of delivery with
+                ease... We also receive customers in our restaurant with
+                all cordiality. We offer them the best food... We are also
+                distinguished by the speed of responding to any inquiries
+                you have... We also respond quickly to orders...
+                The ingredients of our dishes are prepared with the
+                finest types of food... We are ready to meet all your
+                requests... If you want to enjoy the food, order now.</p>
+          <a href="index.html" class="order-btn">Back To Main Page</a>
+        </div>
+        <div class="aimage">
+            <img src="images/aboutus.jpg">
+        </div>
+    </div>
+</section>
+<section class="image-gallery">
+
+    <div class="gallery-item">
+        <img src="images/chef1.jpg" alt="Description 1">
+        <p>Hi. My name Omar Ramzi .  I'am 28 years old . I have been working in this restaurant for two years,
+            where I studied the principles of chef in Canada. I have great skill in preparing all foods,
+            but I excel in preparing fast food and desserts.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/chef2.jpg" alt="Description 2">
+        <p>Hi . My name Sara Omair . I'am 29 years old .
+            I have had a talent for cooking since childhood.
+            I loved this field and learned many recipes.
+            I excel at preparing all dishes, but I excel at preparing Arabic food
+        </p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/chef3.jpg" alt="Description 3">
+        <p>Hi . my name Jon Smith . I'am 35 years old . I'am a chinese nationality.
+            I recently joined this restaurant to provide you with the best food.
+            I am very skilled in preparing Chinese food and Western food in general.
+        </p>
+    </div>
+</section>
+</body>
+</html>

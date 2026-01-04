@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styleCss.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Our Special Type</title>
+  <style>
+    .order-btn {
+      display: inline-block;
+      padding: 1px 5px;
+      border: red 3px solid;
+      color: red;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+      margin-top: 15px;
+      align-items: center;
+      margin-left: 20px;
+    }
+    .order-btn::before {
+      position: absolute;
+      content: '';
+      width: 0%;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background: #ffbb99;
+      transition: 0.5s linear;
+      z-index: -1;
+    }
+    .order-btn:hover::before {
+      width: 100%;
+      right: 100%;
+      left: 0%;
+    }
+    .order-btn:hover {
+      color: #ffffff;
+      border-color: #ffbb99;
+    }
+    #bodyy {
+      background: antiquewhite;
+      margin: 0;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .bx {
+      margin: 20px;
+      text-align: center;
+    }
+    .m {
+      max-width: 100%;
+      height: auto;
+    }
+    .content2 {
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body id="bodyy">
+<header>
+  <h1 id="he" style="margin-top: 5px">Our <span>Special Types</span></h1>
+  <nav class="navv" style="margin-top: 5px;">
+
+    <a href="index.html" style="color: red; font-size:27px;">Home ></a>
+  </nav>
+
+</header>
+<!--<div class="header">-->
+<!--  <h1 id="he">Our <span>Special Types</span></h1>-->
+
+<!--</div>-->
+
+<div class="content" style="margin-top: 150px;">
+  <div class="bx">
+    <img class="m" src="images/burger.png" width="700" height="700">
+    <div class="content2">
+      <img src="images/buricon.png" width="120" height="120">
+      <h4>Delicious Burger</h4>
+      <p>The best burgers offer a combination of tastes and textures – sweet, sour, salt – with a bit of crunch.</p>
+    </div>
+  </div>
+  <div class="bx">
+    <img class="m" src="images/chburger.png" width="700" height="700">
+    <div class="content2">
+      <img src="images/chbicon.png" width="120" height="120">
+      <h4>Tasty chicken Burger</h4>
+      <p>My Crispy Chicken Burgers are a 10 out of 10. The combination of crispy outside and tender middle, then served on a soft bun with my tangy sauce, is kind of a revelation.</p>
+    </div>
+  </div>
+  <div class="bx">
+    <img class="m" src="images/pizza.png" width="700" height="700">
+    <div class="content2">
+      <img src="images/pizzaicon.png" width="120" height="120">
+      <h4>Double cheese pizza</h4>
+      <p>We have reached maximum cheesiness. Enjoy all the cheese with garlic sun-dried tomato pesto sauce and sourdough crust.</p>
+    </div>
+  </div>
+  <div class="bx">
+    <img class="m" src="images/soup.png" width="700" height="700">
+    <div class="content2">
+      <img src="images/soupicon.png" width="120" height="120">
+      <h4>Soup</h4>
+      <p>We are excited to bring you this delicious compilation of our best soup recipes & hope this will become your new.</p>
+    </div>
+  </div>
+  <div class="bx">
+    <img class="m" src="images/salad.png" width="700" height="700">
+    <div class="content2">
+      <img src="images/saladicon.png" width="120" height="120">
+      <h4>Salad</h4>
+      <p>These easy salad recipes are perfect for lunches, summer cookouts, and dinner parties! Healthy and delicious.</p>
+    </div>
+  </div>
+  <div class="bx">
+    <img class="m" src="images/chococake.png" width="700" height="700">
+    <div class="content2">
+      <img src="images/cakeicon.png" width="120" height="120">
+      <h4>Special chocolate cake</h4>
+      <p>The Most Amazing Chocolate Cake is moist, decadent, chocolatey perfection with a batter that is made in just one bowl.</p>
+    </div>
+  </div>
+  <div class="bx">
+    <img class="m" src="images/icecream.png" width="700" height="700">
+    <div class="content2">
+      <img src="images/iceicon.png" width="120" height="120">
+      <h4>Ice-Cream</h4>
+      <p>Our ice cream and sorbet flavors include the classics, seasonal favorites and a few seasonal surprises.</p>
+    </div>
+  </div>
+  <div class="bx">
+    <img class="m" src="images/sweets.png" width="700" height="700">
+    <div class="content2">
+      <img src="images/sweeticon.png" width="120" height="120">
+      <h4>Sweets</h4>
+      <p>If dessert is your favourite part of the meal, then this collection is for you.</p>
+    </div>
+  </div>
+  <div class="bx">
+    <img class="m" src="images/juice.png" width="700" height="700">
+    <div class="content2">
+      <img src="images/juiceicon.png" width="120" height="120">
+      <h4>Fresh drinks</h4>
+      <p>Start your day with a freshly blended juice or smoothie. Our refreshing drinks recipes are packed with fruit and veg.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

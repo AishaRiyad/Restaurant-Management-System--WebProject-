@@ -1,0 +1,120 @@
+/*Gallary*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Snap ITC";
+    font-weight: bold;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header  {
+    background-color: #ffbb99;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+.animated-title {
+    font-size: 2.5rem;
+    animation: color-change 3s infinite;
+}
+
+@keyframes color-change {
+    0% { color: #ff6347; }
+    25% { color: #ffa500; }
+    50% { color: #32cd32; }
+    75% { color: #1e90ff; }
+    100% { color: #ff6347; }
+}
+
+
+main {
+    padding: 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gallery-item {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    width: calc(33.333% - 2rem);
+    margin: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 105%;
+    height: 400px;
+    display:block;
+    position:relative;
+    opacity:0.7;
+    object-fit: cover;
+}
+
+
+.caption{
+    color:#0d0d0d;
+    padding:2em;
+    text-transform:uppercase;
+    font-size:1.25em;
+    text-align:center;
+
+}
+
+.gallery-item h2{
+    font-weight: 300;
+    overflow:hidden;
+    padding:.5em 0;
+}
+.gallery-item h2,.gallery-item p{
+    position:relative;
+    z-index:10;
+    margin:0;
+}
+.gallery-item h2 ::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:15%;
+    hight:1px;
+    background:#ffffff;
+    transition: transform 0.3s;
+}
+.gallery-item :hover h2 ::after{
+transform:translate3d(0px,0px,0px);
+}
+.gallery-item p{
+    letter-spacing: 1px;
+    font-size:68%;
+    padding:1em 0;
+    opacity:0;
+    transition: opacity .35s,transform0.35s;
+    transform:translate3d(10%,0px,0px);
+}
+.gallery-item :hover p{
+    opacity:1;
+    transform:translate3d(0px,0px,0px);
+
+
+}
+

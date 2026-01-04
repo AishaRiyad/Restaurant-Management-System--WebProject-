@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Contact Us</title>
+  <style>
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.contactus{
+  min-height: 100vh;
+  background-color: antiquewhite;
+  padding:50px;
+  text-align: center;
+}
+.firstclass{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.firstclass h2{
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #0d0d0d;
+}
+.contact1{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 30px;
+}
+.contactform{
+  text-align: left;
+}
+.contactform h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+  color:#333333;
+}
+.formgroup{
+  margin-bottom: 20px;
+}
+input,textarea{
+  width:100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f8f9fa;
+  color: #333333;
+}
+input:focus,textarea:focus{
+  outline:none;
+  box-shadow: 0 0 8px #bbb;
+}
+button{
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: darkgreen;
+  color: #fff5e6;
+  border:none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover{
+  background-color: limegreen;
+}
+.contact-info{
+  text-align: left;
+}
+.contact-info h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+.contact-info p{
+  margin-bottom: 10px;
+  color: #555;
+}
+.contact-info i{
+  color:darkgreen;
+  margin-right: 10px;
+}
+@media screen and (max-width=768px){
+  .contactus{
+    padding: 20px;
+  }
+  .contact1{
+    grid-template-columns:1fr ;
+  }
+}
+
+  </style>
+</head>
+<body id="12345">
+<div class="contactus">
+  <div class="firstclass">
+    <h2> Contact Us </h2>
+    <div class="contact1">
+      <div class="contactform">
+        <h3> Send Us a Message</h3>
+        <form>
+          <div class="formgroup">
+            <input type="text" name="name" placeholder="Your Name">
+          </div>
+          <div class="formgroup">
+            <input type="email" name="email" placeholder="Your Email">
+          </div>
+          <div class="formgroup">
+            <textarea name="message" placeholder="Your Message"></textarea>
+          </div>
+          <button type="Submit">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p> <i class="fas fa-phone"> </i>+1 123 456 789</p>
+        <p><i class="fas fa-envelope"> </i>Info@example.com</p>
+        <p><i class="fas fa-map-marker-alt"> </i>123 Street , Nablus , Palestine</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

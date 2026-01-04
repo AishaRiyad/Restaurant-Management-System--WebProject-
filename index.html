@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styleCss.css" />
+  <link href="href=https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+  <title>Our Resturent</title>
+
+  <style type="text/css">
+    #slider {
+      overflow: hidden;
+      width: 200%;
+      max-width: 1000px;
+      margin: 0 auto;
+
+    }
+    #con{
+      background: antiquewhite;
+      position:relative;
+
+    }
+    .galo{
+      background: antiquewhite;
+      position:relative;
+    }
+    .galo .img_cont{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      justify-content: center;
+      padding:10px;
+    }
+    .galo .img_cont .imggal{
+      height:250px;
+      width:350px;
+      border:10px solid #dddddd;
+      box-shadow: 0 5px 15px #0d0d0d;
+      overflow:hidden;
+      cursor:pointer;
+
+
+    }
+    .galo .img_cont .imggal img{
+      height:100%;
+      width:100%;
+      object-fit: cover;
+      transition: .2s linear;
+    }
+    .galo .img_cont .imggal:hover img{
+      transform: scale(1.1);
+    }
+    .popup-imag {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.9);
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .galo .popup-imag span{
+      position:absolute;
+      top:0;
+      right: 10px;
+      font-size: 60px;
+      font-weight: bolder;
+      color:#dddddd;
+      cursor:pointer;
+      z-index:100;
+
+    }
+    .galo .popup-imag img{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      border:5px solid #ffffff;
+      border-radius: 5px;
+      width:750px;
+      object-fit: cover;
+    }
+    @media(max-width:768px ){
+      .galo .popup-imag img{
+        width: 95%;
+      }
+    }
+    #all{
+      background: antiquewhite;
+      margin:0;
+      padding:0;
+    }
+    #slider figure {
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      animation: 20s slider infinite;
+    }
+    #slider figure img {
+      float: left;
+      width: 20%;
+      height: 500px;
+    }
+    @keyframes slider {
+      0% { left: 0; }
+      20% { left: 0; }
+      25% { left: -100%; }
+      45% { left: -100%; }
+      50% { left: -200%; }
+      70% { left: -200%; }
+      75% { left: -300%; }
+      95% { left: -300%; }
+      100% { left: -400%; }
+    }
+    #hpop,#hpop1,#hpop2,#hpop3 ,#hpop4,#first{
+      font-family: "Snap ITC";
+      color: #ff1a1a;
+      text-align: center;
+      font-size: 40px;
+      margin: 0;
+      padding: 0;
+      background: antiquewhite;
+    }
+    #new-header,#new-header1,#new-header2 {
+      text-align: center;
+      font-size: 24px;
+      color: #ff1a1a;
+      background: antiquewhite;
+      margin: 1px;
+    }
+    .cont {
+      position: relative;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      margin: 1px;
+    }
+    .wrapp .spe {
+      font-size: 0px;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+    .wrapp{
+      display: flex;
+      align-items: center;
+    }
+    .spe{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .spe img {
+      height: 600px;
+      object-fit: cover;
+      margin-left: 0px;
+      width: calc(100% / 3);
+      display: inline-block;
+    }
+
+    .spe img:first-child {
+      margin-left: 0; /* Fixing the margin for the first child */
+    }
+
+    .wrapp {
+      max-width: 1200px;
+      position: relative;
+    }
+
+    .spe.dragging {
+      cursor: grab;
+      scroll-behavior: auto;
+    }
+
+    .spe.dragging img {
+      pointer-events: none;
+    }
+
+    .wrapp i {
+      background: #fff5e6;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      line-height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .wrapp i#left {
+      left: -23px;
+      display: none;
+    }
+
+    .wrapp i#right {
+      right: -23px;
+    }
+
+    #specialfood {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: antiquewhite;
+      position: relative;
+
+    }
+
+    @media screen and (max-width: 900px) {
+      .spe img {
+        width: calc(100% / 2);
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      .spe img {
+        width: 100%;
+      }
+    }
+    #bb{
+      background-color: antiquewhite;
+    }
+
+
+    .heading h1{
+      color:#ff6347;
+      font-size:55px;
+      text-align:center;
+      margin-top:35px;
+    }
+
+    img{
+      width:100%;
+      height:auto;
+      border-radius:10px;
+
+    }
+    .content2 h2{
+      font-size:38px;
+      margin-bottom:20px;
+      color:#0d0d0d;
+
+    }
+    .content2 p{
+      font-size:24px;
+      line-height: 1.5;
+      margin-bottom:40px;
+      color:#333333;
+    }
+    .content2 button{
+      display:inline-block;
+      background-color:#ff6347;
+      color:#ffe6e6;
+      padding:12px 24px;
+      font-size:20px;
+      border:none;
+      cursor:pointer;
+      transition:0.3s ease;
+
+    }
+    .content2 button:hover{
+      background-color:#ffbb99;
+      transform:scale(1.1);
+    }
+    @media screen and (max-width:768px){
+      .heading h1{
+        font-size:45px;
+        margin-top:30px;
+      }
+
+
+      .content h2{
+        font-size:30px;
+
+      }
+      .content p{
+        font-size:18px;
+        margin-bottom:20px ;
+      }
+      .content button{
+        font-size:16px;
+        padding:8px 16px;
+
+      }
+
+    }
+    @keyframes fadeInUp{
+      0%{
+        opacity:0%;
+        transform:translateY(50px );
+      }
+      100%{
+        opacity:0%;
+        transform:translateY(0px );
+      }
+    }
+    @keyframes fadeInRight{
+      0%{
+        opacity:0%;
+        transform:translateY(-50px );
+      }
+      100%{
+        opacity:1;
+        transform:translateY(0px );
+      }
+    }
+    .image-gallery {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      margin: 50px auto;
+      width: 90%;
+      font-family: "Eras Bold ITC";
+      font-weight: bold;
+
+
+    }
+
+    .gallery-item {
+      flex: 1;
+      margin: 15px;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 105%;
+      height: 500px;
+      position:relative;
+      object-fit: cover;
+    }
+
+    .gallery-item p {
+      font-size: 18px;
+      color: #333333;
+      margin-top: 10px;
+      text-align:center;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 768px) {
+      .image-gallery {
+        flex-wrap: wrap;
+      }
+      .gallery-item {
+        flex: 1 1 100%;
+        margin: 10px 0;
+      }
+    }
+
+
+    .contaner{
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap:10rem;
+    }
+    .cont-left h1{
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0d0d0d;
+    }
+    .cont-left p{
+      color:#262626;
+      margin-bottom: 1rem;
+    }
+    .cont-left button{
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(to right,#ff1a1a,#ff6347);
+    }
+    .cont-right{
+      display: grid;
+      gap:2rem;
+    }
+    .card{
+      padding: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      background-color: #fff5e6;
+      border-radius: 1rem;
+      box-shadow: 5px 5px 20px #0d0d0d;
+      cursor:pointer;
+
+    }
+    .card img{
+      max-width: 75px;
+      border-radius: 100%;
+    }
+    .card-content{
+      display: flex;
+      gap: 1rem;
+    }
+    .card-content span i{
+      font-size: 2rem;
+      color: #0d0d0d;
+    }
+    .card-details p{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 2rem;
+      color: #0d0d0d;
+      margin-bottom: 2rem;
+    }
+    .card-details h4{
+      text-align: right;
+      color: #cc0000;
+      font-size: 1rem;
+      font-weight:bold ;
+    }
+    @media (width <1200px) {
+      .contaner{
+        gap:3rem;
+      }
+
+    }
+    @media (width<900px){
+      .contaner{
+        grid-template-columns: repeat(1,1fr);
+      }
+      .cont-right{
+        grid-template-columns: repeat(2,1fr);
+      }
+
+    }
+    @media (width<750px) {
+      .cont-right{
+        grid-template-columns: repeat(1,1fr);
+      }
+
+    }
+    #first1{
+      font-weight: bold;
+      font-size: 30px;
+    }
+    #first2{
+      font-weight: bold;
+      font-size: 15px;
+      color: #ff1a1a;
+    }
+
+    #hpop4{
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+
+    #body3{
+
+      background: url("images/F-Back.jpg" )no-repeat ;
+      background-size: cover;
+      /*background-position: center;*/
+
+
+    }
+
+    .contact{
+      padding: 50px 17% 35px;
+    }
+
+    .main-contact{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+      justify-content: center;
+
+      gap: 4rem;
+    }
+
+    .contact-content{
+      font-size: 20px;
+      margin-bottom: 2rem;
+      color: red;
+    }
+    .contact-content li{
+      margin-bottom:1.3rem;
+    }
+    .contact-content li a{
+      display: inline-block;
+      color: brown;
+      font-weight:1000;
+      transition: all .35s ease;
+
+    }
+    .contact-content li a:hover{
+      transform: translate3d(10px,10px,10px);
+      color: deeppink;
+    }
+  </style>
+
+
+</head>
+<body id="bb" >
+
+<header>
+  <a href="#" class="icoon"><i class="fas fa-utensils"></i>FOOOOOD</a>
+  <div id="menub" class="	fas fa-bars"></div>
+
+
+  <nav class="navv">
+    <a href="index.html">Home</a>
+    <a href="specialtype.html">Speciality</a>
+    <a href="popular.html">Popular</a>
+    <a href="Galary.html">Gallery</a>
+    <a href="aboutus.php">About us</a>
+    <a href="contactus.php">Contact Us</a>
+  </nav>
+</header>
+
+<div class="cont">
+  <div class="wtext">
+    <h2 id="h2id">Taste the best</h2>
+    <p id="par">The happy restaurant was born out of love and respect for these humble deli creations, met with a desire to bring quality ingredients to the table. Simply put, we’re here to bring you a sandwich experience you can feel good about.</p>
+    <a href="login.php" class="orbtn" id="orbtn">LOGIN</a>
+  </div>
+  <video autoplay muted loop id="video12">
+    <source src="images/fbv.mp4" type="video/mp4">
+  </video>
+</div>
+<!--<br>-->
+<!--<br>-->
+<!--<div class="galo">-->
+<!--  <div id="new-header1">-->
+<!--    <h1 id="hpop1">Our Gallary</h1>-->
+<!--  </div>-->
+<!--  <div class="img_cont">-->
+<!--    <div class="imggal"> <img src="images/sweetgal.jpg" alt="type1"></div>-->
+<!--    <div class="imggal"> <img src="images/burgal.jpg" alt="type1"></div>-->
+<!--    <div class="imggal"> <img src="images/jgal.jpg" alt="type1"></div>-->
+<!--    <div class="imggal"> <img src="images/sjal.jpg" alt="type1"></div>-->
+<!--    <div class="imggal"> <img src="images/spgal.jpg" alt="type1"></div>-->
+<!--    <div class="imggal"> <img src="images/sagal.jpg" alt="type1"></div>-->
+<!--  </div>-->
+<!--  <div class="popup-imag">-->
+<!--    <span class="close" >&times;</span>-->
+<!--    <img src="images/sweetgal.jpg" alt="type1">-->
+<!--  </div>-->
+<!--</div>-->
+<!--<br>-->
+<!--<br>-->
+<!--<div id="con">-->
+<!--  <div id="new-header">-->
+<!--    <h1 id="hpop">Our Popular Types</h1>-->
+<!--  </div>-->
+<!--  <div id="slider">-->
+<!--    <figure>-->
+<!--      <img src="images/pizza2.jpg" alt="Pizza">-->
+<!--      <img src="images/cchicken.jpg" alt="Chicken">-->
+<!--      <img src="images/arabicdessert.jpg" alt="Arabic Dessert">-->
+<!--      <img src="images/italian.jpg" alt="Italian">-->
+<!--      <img src="images/img5.jpg" alt="Dessert">-->
+<!--    </figure>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<br>-->
+<!--<br>-->
+<!--<div id="new-header2">-->
+<!--  <h1 id="hpop2">Our Special Type </h1>-->
+<!--</div>-->
+<!--<div id="reviewid">-->
+
+<!--  <div id="specialfood">-->
+<!--    <div class="wrapp">-->
+<!--      <i id="left" class="fa-solid fa-angle-left"></i>-->
+<!--      <div class="spe">-->
+<!--        <img src="images/sp11.jpg" alt="" draggable="false">-->
+<!--        <img src="images/sp2222.jpg" alt="" draggable="false">-->
+<!--        <img src="images/sp333.jpg" alt="" draggable="false">-->
+<!--        <img src="images/sp4.jpg" alt="" draggable="false">-->
+<!--        <img src="images/sp5.jpg" alt="" draggable="false">-->
+<!--        <img src="images/sp66.jpg" alt="" draggable="false">-->
+<!--        <img src="images/sp7.jpg" alt="" draggable="false">-->
+<!--        <img src="images/sp8.jpg" alt="" draggable="false">-->
+<!--        <img src="images/sp9.jpg" alt="" draggable="false">-->
+<!--      </div>-->
+<!--      <i id="right" class="fa-solid fa-angle-right"></i>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<br>-->
+<!--<br>-->
+
+
+<!--<h1 id="hpop4">About Us </h1>-->
+<!--</section>-->
+<!--<section class="image-gallery">-->
+
+<!--  <div class="gallery-item">-->
+<!--    <img src="images/chef1.jpg" alt="Description 1">-->
+<!--    <p>Hi. My name Omar Ramzi .  I'am 28 years old . I have been working in this restaurant for two years,-->
+<!--      where I studied the principles of chef in Canada. I have great skill in preparing all foods,-->
+<!--      but I excel in preparing fast food and desserts.</p>-->
+<!--  </div>-->
+<!--  <div class="gallery-item">-->
+<!--    <img src="images/chef2.jpg" alt="Description 2">-->
+<!--    <p>Hi . My name Sara Omair . I'am 29 years old .-->
+<!--      I have had a talent for cooking since childhood.-->
+<!--      I loved this field and learned many recipes.-->
+<!--      I excel at preparing all dishes, but I excel at preparing Arabic food-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="gallery-item">-->
+<!--    <img src="images/chef3.jpg" alt="Description 3">-->
+<!--    <p>Hi . my name Jon Smith . I'am 35 years old . I'am a chinese nationality.-->
+<!--      I recently joined this restaurant to provide you with the best food.-->
+<!--      I am very skilled in preparing Chinese food and Western food in general.-->
+<!--    </p>-->
+<!--  </div>-->
+<!--</section>-->
+<!--<br>-->
+<!--<br>-->
+
+<!--<div class="contaner" id="cont">-->
+<!--  <div class="cont-left">-->
+<!--    <h1 id="first">Read what our customers love about us  </h1>-->
+<!--    <p id="first1">-->
+<!--      Over 200 companies frim diverse sectors consult us to enhance the user-->
+<!--      experience of theier products and services .-->
+<!--    </p>-->
+<!--    <p id="first2">-->
+<!--      we have helped companies increase their customer base and generate-->
+<!--      multifold revenue with our service .-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <button>Read our success stories</button>-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="cont-right">-->
+<!--    <div class="card">-->
+<!--      <img src="images/person1.jpg" alt="user1">-->
+<!--      <div class="card-content">-->
+<!--        <span> <i class="ri-double-quotes-1"></i></span>-->
+<!--        <div class="card-details">-->
+<!--          <p>-->
+<!--            we had a great time collaboraring with the filament team.-->
+<!--            They have my high recommendation ! .-->
+<!--          </p>-->
+<!--          <h4>Marnus Stephen</h4>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="card" id="card">-->
+<!--      <img src="images/person2.jpg" alt="user1">-->
+<!--      <div class="card-content">-->
+<!--        <span> <i class="ri-double-quotes-1"></i></span>-->
+<!--        <div class="card-details">-->
+<!--          <p>-->
+<!--            The team drastically improved our products user experience &-->
+<!--            increased our business outreach.-->
+<!--          </p>-->
+<!--          <h4>Andrew Jettpace</h4>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--      <img src="images/person3.jpg" alt="user1">-->
+<!--      <div class="card-content">-->
+<!--        <span> <i class="ri-double-quotes-1"></i></span>-->
+<!--        <div class="card-details">-->
+<!--          <p>-->
+<!--            I absolutely loved working with the filament team .-->
+<!--            Complete exports at what they do !.-->
+<!--          </p>-->
+<!--          <h4>Stacy Stone</h4>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<div id="body3">-->
+<!--  <section class="contact" id="contact">-->
+<!--    <div class="main-contact">-->
+<!--      <div class="contact-content">-->
+<!--        <h3 style="font-family: 'Snap ITC'; font-size: 30px;">Services</h3>-->
+<!--        <li><a href="index.html">Home</a></li>-->
+<!--        <li><a href="specialtype.html">Speciality</a></li>-->
+<!--        <li><a href="popular.html">Popular</a></li>-->
+<!--        <li><a href="Galary.html">Gallery</a></li>-->
+<!--        <li><a href="#card">Review</a></li>-->
+<!--        <li><a href="orderlist.html">Order</a></li>-->
+<!--        <li><a href="about_us.html">About-us</a></li>-->
+<!--      </div>-->
+<!--      <div class="contact-content">-->
+<!--        <h3 style="font-family: 'Snap ITC'; font-size: 30px;">Delivery</h3>-->
+<!--        <li><a href="orderlist.html #breakfast">BreakFast</a></li>-->
+<!--        <li><a href="orderlist.html #breakfast1">Lunch</a></li>-->
+<!--        <li><a href="orderlist.html #breakfast2">Dinner</a></li>-->
+<!--        <li><a href="orderlist.html #breakfast3">Sweets</a></li>-->
+<!--        <li><a href="orderlist.html #breakfast4">Drinks</a></li>-->
+
+<!--      </div>-->
+<!--      <div class="contact-content">-->
+<!--        <h3 style="font-family: 'Snap ITC'; font-size: 30px;">Contact</h3>-->
+<!--        <li><a href="Contact-usPage.html">Contact-Us</a></li>-->
+<!--        <li><a href="presscenter.html">Press Center</a></li>-->
+<!--        <li><a href="career.html">Careers</a></li>-->
+<!--        <li><a href="FAQ.html">FAQ</a></li>-->
+<!--      </div>-->
+
+<!--      <div class="contact-content">-->
+<!--        <h3 style="font-family: 'Snap ITC';font-size: 30px;">Follow Us</h3>-->
+<!--        <li><a href="https://www.facebook.com">Facebook</a></li>-->
+<!--        <li><a href="https://www.instagram.com">Instagram</a></li>-->
+<!--        <li><a href="https://www.Whatsapp.com">Whatsapp</a></li>-->
+<!--        <li><a href="https://www.telegram.com">Telegram</a></li>-->
+<!--        <li><a href="https://www.Twitter.com">Twitter</a></li>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+
+<!--  </section>-->
+<!--</div>-->
+<!--<script src="jsstyle.js"></script>-->
+<!--<script>-->
+<!--  function openPopup(imgSrc) {-->
+<!--    const popup = document.querySelector('.popup-imag');-->
+<!--    const popupImg = popup.querySelector('img');-->
+<!--    const closeBtn = popup.querySelector('.close');-->
+<!--    popup.style.display = 'block';-->
+<!--    popupImg.src = imgSrc;-->
+<!--    closeBtn.style.display = 'block'; // Show close button-->
+<!--  }-->
+
+<!--  document.querySelectorAll('.img_cont img').forEach(imggal => {-->
+<!--    imggal.onclick = () => {-->
+<!--      openPopup(imggal.getAttribute('src'));-->
+<!--    }-->
+<!--  });-->
+
+<!--</script>-->
+<!--<script>-->
+<!--  const spe = document.querySelector(".spe");-->
+<!--  const firstImg = document.querySelectorAll(".spe img")[0];-->
+<!--  const arrowIcons = document.querySelectorAll(".wrapp i");-->
+<!--  let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;-->
+
+<!--  // Function to show/hide arrow icons based on scroll position-->
+<!--  const showHideIcons = () => {-->
+<!--    const scrollWidth = spe.scrollWidth - spe.clientWidth; // Get max scrollable width-->
+<!--    arrowIcons[0].style.display = spe.scrollLeft === 0 ? "none" : "block";-->
+<!--    arrowIcons[1].style.display = spe.scrollLeft >= scrollWidth ? "none" : "block";-->
+<!--  };-->
+
+<!--  // Add click event to the arrow icons-->
+<!--  arrowIcons.forEach(icon => {-->
+<!--    icon.addEventListener("click", () => {-->
+<!--      const firstImgWidth = firstImg.clientWidth + 14; // Get the width of the first image including margin-->
+<!--      spe.scrollLeft += icon.id === "left" ? -firstImgWidth : firstImgWidth;-->
+<!--      setTimeout(() => showHideIcons(), 60); // Call showHideIcons after 60ms-->
+<!--    });-->
+<!--  });-->
+
+<!--  // Auto slide images-->
+<!--  const autoSlide = () => {-->
+<!--    if (spe.scrollLeft === (spe.scrollWidth - spe.clientWidth)) return;-->
+<!--    positionDiff = Math.abs(positionDiff);-->
+<!--    const firstImgWidth = firstImg.clientWidth + 14;-->
+<!--    const valDifference = firstImgWidth - positionDiff;-->
+<!--    if (spe.scrollLeft > prevScrollLeft) {-->
+<!--      return spe.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;-->
+<!--    }-->
+<!--    spe.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;-->
+<!--  };-->
+
+<!--  // Drag start event-->
+<!--  const dragStart = (e) => {-->
+<!--    isDragStart = true;-->
+<!--    prevPageX = e.pageX || e.touches[0].pageX;-->
+<!--    prevScrollLeft = spe.scrollLeft;-->
+<!--  };-->
+
+<!--  // Dragging event-->
+<!--  const dragging = (e) => {-->
+<!--    if (!isDragStart) return;-->
+<!--    e.preventDefault();-->
+<!--    spe.classList.add("dragging");-->
+<!--    const positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;-->
+<!--    spe.scrollLeft = prevScrollLeft - positionDiff;-->
+<!--    showHideIcons();-->
+<!--  };-->
+
+<!--  // Drag stop event-->
+<!--  const dragStop = () => {-->
+<!--    isDragStart = false;-->
+<!--    spe.classList.remove("dragging");-->
+<!--    autoSlide();-->
+<!--  };-->
+
+<!--  // Add event listeners-->
+<!--  spe.addEventListener("mousedown", dragStart);-->
+<!--  spe.addEventListener("touchstart", dragStart);-->
+<!--  spe.addEventListener("mousemove", dragging);-->
+<!--  spe.addEventListener("touchmove", dragging);-->
+<!--  spe.addEventListener("mouseup", dragStop);-->
+<!--  spe.addEventListener("mouseleave", dragStop);-->
+<!--  spe.addEventListener("touchend", dragStop);-->
+<!--</script>-->
+</body>
+</html>
